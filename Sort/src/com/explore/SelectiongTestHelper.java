@@ -65,7 +65,7 @@ public class SelectiongTestHelper {
 
             assert isSorted(arr);
 
-            System.out.println(sortClass.getSimpleName() +" : " + (endTime - startTime) + "ms");
+            System.out.println(sortClass.getSimpleName() +" : " + (endTime - startTime) + " ms");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (NoSuchMethodException e) {

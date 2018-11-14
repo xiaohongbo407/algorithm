@@ -32,13 +32,13 @@ public class SelectionSortComparable {
         }
     }
 
-    private static void swap(Object[] arr, int i, int minindex) {
+    public static void swap(Object[] arr, int i, int that) {
         //定义一个变量临时存储待排序元素i的值
         Object t = arr[i];
-        //将最小元素minindex的值赋给数组i
-        arr[i] = arr[minindex];
-        //将原元素i的值赋给数组minindex，完成数据值的交换
-        arr[minindex] = t;
+        //将最小元素that的值赋给数组i
+        arr[i] = arr[that];
+        //将原元素i的值赋给数组that，完成数据值的交换
+        arr[that] = t;
     }
 
     public static void main(String[] args) {
