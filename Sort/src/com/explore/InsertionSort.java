@@ -21,16 +21,20 @@ public class InsertionSort extends SelectionSortComparable{
         }
     }
 
-    /*public static void sort(Comparable[] arr){
-        int n = arr.length;
-        // 从第二个元素开始对比之前得元素得大小
-        for(int i = 1 ; i < n ; i++ ){
-           // 寻找元素i之前得每个元素与前一个元素比较，符合排序条件得则调换值得位置
-           for(int j = i; j > 0 && arr[j].compareTo(arr[j-1]) < 0; j-- ) {
-               swap(arr,j,j-1);
-           }
+    //对数组arr[l...r]的区间进行排序
+    public static void sort(Comparable[] arr,int l,int r){
+        //需要区间值l,r；r作为数组下标与数组长度存在一个差值，所有i要小于等于r
+        for(int i = l; i <= r; i++){
+            Comparable e = arr[i];
+            int j = i;
+            //此处对j的约束是大于l,避免超过区间起始值进行排序。
+            for ( ; j > l && arr[j-1].compareTo(e) > 0 ; j--){
+                arr[j] = arr[j-1];
+            }
+            arr[j] = e;
         }
-    }*/
+    }
+
 
     public static void main(String[] args) {
 

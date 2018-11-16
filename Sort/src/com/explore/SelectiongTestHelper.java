@@ -11,12 +11,42 @@ import java.lang.reflect.Method;
  **/
 public class SelectiongTestHelper {
 
+    /**
+     * 生成一个大小为n个元素的数组，数组中每个元素在rangeL和rangeR之间随机生成。
+     * @param n 随机生成元素数组个数
+     * @param rangeL 生成元素最小值
+     * @param rangeR 生成元素最大值
+     * @return 随机数组
+     */
     public static Integer[] generateRandomArray(int n,int rangeL,int rangeR){
         Integer[] arr = new Integer[n];
         for (int i = 0 ; i < n ; i++ ){
             arr[i] = new Integer((int)(Math.random() * (rangeR - rangeL +1) + rangeL));
         }
         return  arr;
+    }
+
+    /**
+     * 生成一个近乎有序的数组，首先生成一个长度为n的完全有序的数组，之后随机交换swapTimes对数组元素
+     * swapTimes定义了数组的无序程度，当swapTimes等于零时，数据是完全有序的
+     * swapTimes越大，数组越趋向于无序
+     * @param n
+     * @param swapTimes
+     * @return
+     */
+    public static Integer[] generateNearlyOrderArray(int n,int swapTimes){
+        Integer[] arr = new Integer[n];
+        for (int i=0;i<n;i++){
+            arr[i]=new Integer(i);
+        }
+        for (int i = 0; i < swapTimes ; i++){
+            int a = (int)(Math.random()*n);
+            int b = (int)(Math.random()*n);
+            int t = arr[a];
+            arr[a] = arr[b];
+            arr[b] = t;
+        }
+        return arr;
     }
 
     public static void printArray(Object arr[]){
@@ -34,7 +64,7 @@ public class SelectiongTestHelper {
      * @return
      */
     public static boolean isSorted(Comparable[] arr){
-        for (int i = 0 ; i < arr.length ; i++){
+        for (int i = 0 ; i < arr.length - 1 ; i++){
             if(arr[i].compareTo(arr[i+1]) > 0){
                 return false;
             }
