@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
  * @description
  * @date 2018-11-13 11:23 PM
  **/
-public class SelectiongTestHelper {
+public class SortTestHelper {
 
     /**
      * 生成一个大小为n个元素的数组，数组中每个元素在rangeL和rangeR之间随机生成。

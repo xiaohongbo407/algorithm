@@ -52,12 +52,13 @@ public class MergeSort {
      * @param r
      */
     protected static void merge(Comparable[] arr,int l,int mid,int r){
-        //
+        //定义左半边数组的起始索引i的值为l，右半边数组的起始索引j的值为mid+1。
         int i = l, j = mid+1;
 
         //创建临时数据组存储原始数据元素
         Comparable[] aux = Arrays.copyOfRange(arr,l,r+1);
-
+        //开始遍历数组，起始值为l，最大值为r，由于r是数组右边界元素下标，
+        // 所以要遍历完待归并数组需要等于r
         for(int k = l; k <= r; k++){
 
             if(i > mid ){
@@ -79,12 +80,12 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        Comparable[] arr =SelectiongTestHelper.generateRandomArray(500,1,50);
-        //boolean isSorted = SelectiongTestHelper.isSorted(arr);
+        Comparable[] arr = SortTestHelper.generateRandomArray(1000000,1,500);
+        //boolean isSorted = SortTestHelper.isSorted(arr);
         //System.out.println(isSorted);
-        SelectiongTestHelper.testSort("com.explore.MergeSort",arr);
-        SelectiongTestHelper.printArray(arr);
-        boolean isSorted = SelectiongTestHelper.isSorted(arr);
+        SortTestHelper.testSort("com.explore.MergeSort",arr);
+        //SortTestHelper.printArray(arr);
+        boolean isSorted = SortTestHelper.isSorted(arr);
         System.out.println(isSorted);
     }
 

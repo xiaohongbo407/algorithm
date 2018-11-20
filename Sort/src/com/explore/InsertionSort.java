@@ -38,11 +38,11 @@ public class InsertionSort extends SelectionSortComparable{
 
     public static void main(String[] args) {
 
-        Integer[]  arr =SelectiongTestHelper.generateRandomArray(50000,1,100);
-        SelectiongTestHelper.testSort("com.explore.SelectionSortComparable",arr);
+        Integer[]  arr = SortTestHelper.generateRandomArray(50000,1,100);
+        SortTestHelper.testSort("com.explore.SelectionSortComparable",arr);
 
-        Integer[]  arr1 =SelectiongTestHelper.generateRandomArray(50000,1,100);
-        SelectiongTestHelper.testSort("com.explore.InsertionSort",arr1);
+        Integer[]  arr1 = SortTestHelper.generateRandomArray(50000,1,100);
+        SortTestHelper.testSort("com.explore.InsertionSort",arr1);
 
     }
 

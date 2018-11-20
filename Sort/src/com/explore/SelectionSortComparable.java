@@ -69,14 +69,14 @@ public class SelectionSortComparable {
         }
 
         //测试随机数生成
-        Integer[] arr = SelectiongTestHelper.generateRandomArray(10000,1,10000);
-        SelectiongTestHelper.testSort("com.explore.SelectionSortComparable",arr);
+        Integer[] arr = SortTestHelper.generateRandomArray(10000,1,10000);
+        SortTestHelper.testSort("com.explore.SelectionSortComparable",arr);
 
         //测试随机数生成
-        Integer[] arr1 = SelectiongTestHelper.generateRandomArray(100000,1,100000);
-        SelectiongTestHelper.testSort("com.explore.SelectionSortComparable",arr1);
+        Integer[] arr1 = SortTestHelper.generateRandomArray(100000,1,100000);
+        SortTestHelper.testSort("com.explore.SelectionSortComparable",arr1);
 
-//        SelectiongTestHelper.printArray(arr);
+//        SortTestHelper.printArray(arr);
 
 
 

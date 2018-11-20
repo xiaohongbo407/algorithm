@@ -1,7 +1,5 @@
 package com.explore;
 
-import java.util.Arrays;
-
 /**
  * MergeSort 归并排序算法学习
  * @date 2018/11/14 16:36
@@ -50,18 +48,17 @@ public class MergeSort2 extends MergeSort {
 
 
     public static void main(String[] args) {
-        //Comparable[] arr =SelectiongTestHelper.generateRandomArray(500000,1,50);
+        //Comparable[] arr =SortTestHelper.generateRandomArray(500000,1,50);
 
-        Comparable[] arr =SelectiongTestHelper.generateNearlyOrderArray(5000000,200);
-        SelectiongTestHelper.testSort("com.explore.InsertionSort",arr);
-        boolean isSorted = SelectiongTestHelper.isSorted(arr);
-        System.out.println(isSorted);
+        //Comparable[] arr =SortTestHelper.generateNearlyOrderArray(5000000,200);
+        //SortTestHelper.testSort("com.explore.InsertionSort",arr);
+        //boolean isSorted = SortTestHelper.isSorted(arr);
+        //System.out.println(isSorted);
 
-        //Comparable[] arr1 =SelectiongTestHelper.generateRandomArray(500000,1,50);
-        Comparable[] arr1 =SelectiongTestHelper.generateNearlyOrderArray(5000000,200);
-        SelectiongTestHelper.testSort("com.explore.MergeSort2",arr1);
-        isSorted = SelectiongTestHelper.isSorted(arr1);
-        System.out.println(isSorted);
+        Comparable[] arr1 = SortTestHelper.generateRandomArray(1000000,1,50000);
+        //Comparable[] arr1 =SortTestHelper.generateNearlyOrderArray(5000000,200);
+        SortTestHelper.testSort("com.explore.MergeSort2",arr1);
+        System.out.println(SortTestHelper.isSorted(arr1));
     }
 
 }
