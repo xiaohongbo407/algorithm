@@ -11,7 +11,7 @@ public class QuickSort {
     public static void sort(Comparable[] arr) {
         int n = arr.length;
         quickSort(arr,0,n-1);
-        SortTestHelper.printArray(arr);
+
     }
 
     private static void quickSort(Comparable[] arr, int l, int r) {
@@ -20,16 +20,10 @@ public class QuickSort {
         }
 
         int p = partition(arr,l,r);
-        SortTestHelper.printArray(arr);
-        System.out.println("partition p " + p);
 
-        System.out.println("partition l "+ l + " : " + (p-1));
         quickSort(arr,l,p-1);
-        SortTestHelper.printArray(arr);
 
-        System.out.println("partition r "+(p+1) + " : " + r);
         quickSort(arr,p+1,r);
-        SortTestHelper.printArray(arr);
 
     }
 
@@ -41,12 +35,9 @@ public class QuickSort {
             if(arr[i].compareTo(v) < 0){
                 j++;
                 swap(arr,j,i);
-                SortTestHelper.printArray(arr);
             }
         }
-
         swap(arr,l,j);
-        SortTestHelper.printArray(arr);
         return  j;
     }
 
@@ -58,7 +49,7 @@ public class QuickSort {
 
     public static void main(String[] args) {
         // TODO 思考为什么随机数的范围越小，快速排序的速度越慢？
-        Integer[] arr = SortTestHelper.generateRandomArray(20,1,5);
+        Integer[] arr = SortTestHelper.generateRandomArray(200000,1,500);
         //Integer[] arr = SortTestHelper.generateNearlyOrderArray(1000000,500);
         SortTestHelper.testSort("com.explore.QuickSort",arr);
         System.out.println(SortTestHelper.isSorted(arr));
