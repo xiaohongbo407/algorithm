@@ -55,8 +55,8 @@ public class MergeSort2 extends MergeSort {
         //boolean isSorted = SortTestHelper.isSorted(arr);
         //System.out.println(isSorted);
 
-        Comparable[] arr1 = SortTestHelper.generateRandomArray(1000000,1,50000);
-        //Comparable[] arr1 =SortTestHelper.generateNearlyOrderArray(5000000,200);
+        Comparable[] arr1 = SortTestHelper.generateRandomArray(1000000,1,1000000);
+        //Comparable[] arr1 =SortTestHelper.generateNearlyOrderArray(1000000,100);
         SortTestHelper.testSort("com.explore.MergeSort2",arr1);
         System.out.println(SortTestHelper.isSorted(arr1));
     }

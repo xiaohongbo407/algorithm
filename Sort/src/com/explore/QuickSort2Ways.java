@@ -5,9 +5,9 @@ package com.explore;
  * @version V1.0
  * @date 2018-11-20 11:16 PM
  **/
-public class QuickSort2 {
+public class QuickSort2Ways {
     // 我们的算法类不允许产生任何实例
-    private QuickSort2(){}
+    private QuickSort2Ways(){}
 
     public static void sort(Comparable[] arr){
         int n = arr.length;
@@ -17,7 +17,7 @@ public class QuickSort2 {
     }
 
     private static void quickSort(Comparable[] arr, int low, int high) {
-        int l = low;
+        int l = low+1;
         int h = high;
         Comparable v = arr[low];
 
@@ -47,7 +47,7 @@ public class QuickSort2 {
         // 可以在1秒之内轻松处理100万数量级的数据
         int N = 1000000;
         Integer[] arr = SortTestHelper.generateRandomArray(N, 0, 50);
-        SortTestHelper.testSort("com.explore.QuickSort2", arr);
+        SortTestHelper.testSort("com.explore.QuickSort2Ways", arr);
 
         return;
     }
