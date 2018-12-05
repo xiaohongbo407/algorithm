@@ -49,6 +49,7 @@ public class QuickSort {
 
     public static void main(String[] args) {
         // TODO 思考为什么随机数的范围越小，快速排序的速度越慢？
+        // 在单路的基础快速排序下，大量重复元素会影响递归的过程，有时会造成堆栈溢出
         Integer[] arr = SortTestHelper.generateRandomArray(1000000,1,1000000);
         //Integer[] arr = SortTestHelper.generateNearlyOrderArray(1000000,100);
         SortTestHelper.testSort("com.explore.QuickSort",arr);
